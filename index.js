@@ -31,16 +31,24 @@ document.addEventListener("DOMContentLoaded",()=>{
   }
       }
 
-      function showWeather(data) {
-        const cityName = data.name;
-        const weatherDescription = data.weather[0].description;
-        const temperature = data.main.temp;
+    //   function showWeather(data) {
+    //     const cityName = data.name;
+    //     const weatherDescription = data.weather[0].description;
+    //     const temperature = data.main.temp;
     
-        weatherCity.textContent = cityName;
-        weatherInfo.style.display = "block";
-        weatherDescription.textContent = `Weather: ${weatherDescription}, Temperature: ${temperature}°C`;
-      }
+    //     weatherCity.textContent = cityName;
+    //     weatherInfo.style.display = "block";
+    //     weatherDescription.textContent = `Weather: ${weatherDescription}, Temperature: ${temperature}°C`;
+    //   }
 
+      function showWeather(data){
+        const cityName=data.name;
+        const weatherDes=data.weather[0].main;
+        const temperature = data.main.temp;
+        weatherCity.textContent=cityName;
+        weatherInfo.style.display = "block";
+        weatherDescription.textContent=`Weather:${weatherDes},Temperature: ${temperature}°C`;
+      }
    
   
 })
