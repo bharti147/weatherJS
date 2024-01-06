@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded",()=>{
     const cityInput = document.getElementById("cityInput");
-    const apiKey="ddb60c60493386bfe579d47f9d3bf075";
+    const apiKey= "copy from env file";
     const getWeatherBtn = document.getElementById("getWeatherBtn");
     const weatherInfo = document.getElementById("weatherInfo");
     const weatherCity= weatherInfo.querySelector('h2');
@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded",()=>{
         const temperature = data.main.temp;
         weatherCity.textContent=cityName;
         weatherInfo.style.display = "block";
-        weatherDescription.textContent=`Weather:${weatherDes},Temperature: ${temperature}°C`;
+        weatherDescription.textContent=`Weather:${weatherDescription},Temperature: ${temperature}°C`;
       }
    
   
